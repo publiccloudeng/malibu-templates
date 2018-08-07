@@ -1,17 +1,30 @@
 package controller;
 
-import java.util.Arrays;
-
+import block.Config;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
+import java.security.KeyManagementException;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
+
 @SpringBootApplication
 public class Application {
 
     public static void main(String[] args) {
+        try {
+            Config.disableSSLValidation();
+        } catch (KeyStoreException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (KeyManagementException e) {
+            e.printStackTrace();
+        }
         SpringApplication.run(Application.class, args);
     }
 

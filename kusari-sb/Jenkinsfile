@@ -1,0 +1,31 @@
+//Sample Jenkinsfile
+node('master') {
+  stage('checkout') {
+  checkout scm
+  }
+  stage('Build') {
+  def mvnHome = tool 'Maven3'
+  env.PATH = "${mvnHome}/bin:${env.PATH}"
+  sh "mvn package"
+  sh "ls -l"
+  }
+
+  stage('Test') {}
+  stage('Scan') {}
+
+  stage('Upload') {
+  	def server = Artifactory.server 'ant-1'
+  	def uploadSpec = """{
+        	"files" : [
+            	{
+                	"pattern": "*.jar", 
+                	"target": "Hackathon-local"
+            	}
+        	]
+   	}"""
+
+   	def buildInfo = server.upload uploadSpec
+   	server.publishBuildInfo buildInfo
+   }
+}
+

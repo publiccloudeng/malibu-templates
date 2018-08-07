@@ -1,0 +1,105 @@
+{
+   "name": "<service name>",
+   "resourceUrl": "<URL>",
+   "noteName": "<buildId>",
+   "kind": "BUILD|SCAN|DEPLOY",
+   "createTime": "2017-09-29T02:58:23.376798Z",
+   "updateTime": "2017-09-29T07:35:22.141762Z",
+   "vulnerabilityDetails": {
+     "severity": "LOW",
+     "cvssScore": 1.9,
+     "packageIssue": [ {
+         "affectedLocation": {
+             "cpeUri": "cpe:/o:debian:debian_linux:8",
+             "package": "openldap",
+             "version": {
+                "name": "2.4.40+dfsg",
+                "revision": "1+deb8u2"
+             }
+         }
+     } ]
+   },
+   "buildInfo" : {
+      "version" : "1.0.1",
+      "name" : "blockchain-job :: master",
+      "number" : "9",
+      "type" : "GENERIC",
+      "buildAgent" : {
+          "name" : "Pipeline",
+          "version" : ""
+      },
+      "agent" : {
+           "name" : "Jenkins",
+           "version" : "2.128"
+      },
+     "started" : "2018-06-28T11:31:24.057+0000",
+     "durationMillis" : 5782,
+     "principal" : "admin",
+     "artifactoryPrincipal" : "admin",
+     "artifactoryPluginVersion" : "2.16.1",
+     "url" : "https://ec2-34-229-197-127.compute-1.amazonaws.com:8082/job/blockchain-job/job/master/9/",
+     "vcs" : [ {
+          "revision" : "7dd8defb4aad9aa9bf455adc1e6d2b916a12a401",
+          "url" : "git ec2-54-204-149-77.compute-1.amazonaws.com:VaidyR/Kusari.git",
+          "empty" : false
+     } ],
+     "vcsRevision" : "7dd8defb4aad9aa9bf455adc1e6d2b916a12a401",
+     "vcsUrl" : "git ec2-54-204-149-77.compute-1.amazonaws.com:VaidyR/Kusari.git",
+     "licenseControl" : {
+          "runChecks" : false,
+          "includePublishedArtifacts" : false,
+          "autoDiscover" : false,
+          "licenseViolationsRecipientsList" : "",
+          "scopesList" : ""
+      },
+      "modules" : [ {
+            "id" : "blockchain-job :: master",
+            "artifacts" : [ {
+              "type" : "jar",
+              "sha1" : "9b720f0cd0e798777abb261e7d7b828da9a985e8",
+              "sha256" : "f9b86da9eecb1764e8bc551182c733671c541565f9bde116f8d4a67f59780e61",
+              "md5" : "eb3724c5be61ad3119edda9c5d0994d4",
+              "name" : "gs-spring-boot-0.1.0.jar"
+            } ],
+            "dependencies" : [ ]
+      } ],
+      "buildDependencies" : [ ],
+      "governance" : {
+          "blackDuckProperties" : {
+              "runChecks" : false,
+              "includePublishedArtifacts" : false,
+              "autoCreateMissingComponentRequests" : false,
+              "autoDiscardStaleComponentRequests" : false
+           }
+      }
+   },
+   deployInfo : {
+   	cloudProviders: "aws,kubernetes",
+   	createTs: "1525873986476",
+   	dataSources: {
+	   disabled: [ ],
+	   enabled: [
+		   "canaryConfigs"
+	   ]
+
+        },
+   	description: null,
+   	email: "public.cloud.toolchain@gmail.com",
+   	instancePort: 8080,
+   	lastModifiedBy: "anonymous",
+   	name: "23456WEBUI",
+   	platformHealthOnly: true,
+   	providerSettings: {
+	   aws: {
+		   useAmiBlockDeviceMappings: false
+	   }
+   	},
+        "artifacts" : [ {
+              "type" : "jar",
+              "sha1" : "9b720f0cd0e798777abb261e7d7b828da9a985e8",
+              "sha256" : "f9b86da9eecb1764e8bc551182c733671c541565f9bde116f8d4a67f59780e61",
+              "md5" : "eb3724c5be61ad3119edda9c5d0994d4",
+              "name" : "gs-spring-boot-0.1.0.jar"
+        } ],
+   }
+}
