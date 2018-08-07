@@ -5,7 +5,7 @@
       "application": "malibu",
       "keepWaitingPipelines": false,
       "limitConcurrent": true,
-      "name": "Made By Public Cloud Toolchain",
+      "name": "Made By Public Cloud Toolchain Team",
       "stages": [
         {
           "name": "Wait",
