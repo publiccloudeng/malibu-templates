@@ -1,0 +1,21 @@
+{
+  "application": "malibu",
+  "pipelines": [
+    {
+      "application": "malibu",
+      "keepWaitingPipelines": false,
+      "limitConcurrent": true,
+      "name": "Made By Public Cloud Toolchain",
+      "stages": [
+        {
+          "name": "Wait",
+          "refId": "1",
+          "requisiteStageRefIds": [],
+          "type": "wait",
+          "waitTime": 10
+        }
+      ],
+      "triggers": []
+    }
+  ]
+}
