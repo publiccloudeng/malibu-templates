@@ -8,7 +8,7 @@
       "name": "Made By Public Cloud Toolchain Team",
       "stages": [
         {
-          "name": "Wait",
+          "name": "Tanmay Stage",
           "refId": "1",
           "requisiteStageRefIds": [],
           "type": "wait",
