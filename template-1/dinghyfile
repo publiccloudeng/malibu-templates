@@ -5,7 +5,7 @@
       "application": "malibu",
       "keepWaitingPipelines": false,
       "limitConcurrent": true,
-      "name": "Made By Public Cloud Toolchain Team",
+      "name": "Made By PCTN",
       "stages": [
         {
           "name": "Tanmay Stage",
