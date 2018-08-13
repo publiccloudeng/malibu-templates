@@ -1,1 +1,1 @@
-# malibu-templates
+# Malibu Dinghy Templates
