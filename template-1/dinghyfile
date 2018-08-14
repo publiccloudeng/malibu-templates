@@ -1,1 +1,21 @@
-my updated file contents
+{
+  "application": "na",
+  "pipelines": [
+    {
+      "application": "na",
+      "keepWaitingPipelines": false,
+      "limitConcurrent": true,
+      "name": "Made By PCTN",
+      "stages": [
+        {
+          "name": "Tanmay Stage",
+          "refId": "1",
+          "requisiteStageRefIds": [],
+          "type": "wait",
+          "waitTime": 10
+        }
+      ],
+      "triggers": []
+    }
+  ]
+}
