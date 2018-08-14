@@ -1,1 +1,1 @@
-{"application":"test2malibu","pipelines":[{"application":"test2malibu","keepWaitingPipelines":false,"limitConcurrent":true,"name":"Made By PCTN","stages":[{"name":"Tanmay Stage","refId":"1","requisiteStageRefIds":[],"type":"wait","waitTime":10}],"triggers":[]}]}
+{"application":"tmtestapp","pipelines":[{"application":"tmtestapp","keepWaitingPipelines":false,"limitConcurrent":true,"name":"Made By PCTN","stages":[{"name":"Tanmay Stage","refId":"1","requisiteStageRefIds":[],"type":"wait","waitTime":10}],"triggers":[]}]}
