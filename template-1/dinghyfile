@@ -1,8 +1,8 @@
 {
-  "application": "malibu",
+  "application": "na",
   "pipelines": [
     {
-      "application": "malibu",
+      "application": "na",
       "keepWaitingPipelines": false,
       "limitConcurrent": true,
       "name": "Made By PCTN",
