@@ -1,98 +1,101 @@
-{
-  "description": "a",
-  "keepWaitingPipelines": false,
-  "lastModifiedBy": "anonymous",
-  "limitConcurrent": true,
-  "stages": [
-    {
-      "clusters": [
-        {
-          "account": "kubernetes",
-          "application": "sprintreviewdemo",
-          "cloudProvider": "kubernetes",
-          "containers": [
-            {
-              "args": [],
-              "command": [],
-              "envFrom": [],
-              "envVars": [],
-              "imageDescription": {
-                "imageId": "pctn-pctn-docker.jfrog.io/my-image:latest",
-                "registry": "pctn-pctn-docker.jfrog.io",
-                "repository": "my-image",
-                "tag": "latest"
-              },
-              "imagePullPolicy": "ALWAYS",
-              "name": "my-image",
-              "ports": [
-                {
-                  "containerPort": 80,
-                  "name": "http",
-                  "protocol": "TCP"
+{  
+  "application": "sprintreviewdemo",
+  "pipelines": [{
+    "description": "a",
+    "keepWaitingPipelines": false,
+    "lastModifiedBy": "anonymous",
+    "limitConcurrent": true,
+    "stages": [
+      {
+        "clusters": [
+          {
+            "account": "kubernetes",
+            "application": "sprintreviewdemo",
+            "cloudProvider": "kubernetes",
+            "containers": [
+              {
+                "args": [],
+                "command": [],
+                "envFrom": [],
+                "envVars": [],
+                "imageDescription": {
+                  "imageId": "pctn-pctn-docker.jfrog.io/my-image:latest",
+                  "registry": "pctn-pctn-docker.jfrog.io",
+                  "repository": "my-image",
+                  "tag": "latest"
                 },
-                {
-                  "containerPort": 9100,
-                  "name": "prometheus",
-                  "protocol": "TCP"
-                }
-              ],
-              "volumeMounts": []
-            }
-          ],
-          "dnsPolicy": "ClusterFirst",
-          "events": [],
-          "freeFormDetails": "v2",
-          "initContainers": [],
-          "interestingHealthProviderNames": [
-            "KubernetesContainer",
-            "KubernetesPod"
-          ],
-          "loadBalancers": [
-            "malibu-v1-lb"
-          ],
-          "namespace": "default",
-          "nodeSelector": {},
-          "podAnnotations": {},
-          "provider": "kubernetes",
-          "region": "default",
-          "replicaSetAnnotations": {},
-          "securityGroups": [],
-          "stack": "dev",
-          "strategy": "highlander",
-          "targetSize": 1,
-          "terminationGracePeriodSeconds": 30,
-          "volumeSources": []
-        }
-      ],
-      "name": "Deploy",
-      "refId": "1",
-      "requisiteStageRefIds": [
-        "2"
-      ],
-      "type": "deploy"
-    },
-    {
-      "continuePipeline": false,
-      "failPipeline": true,
-      "job": "artifactory-sprintreviewdemo",
-      "master": "malibu-jenkins",
-      "name": "Jenkins",
-      "parameters": {},
-      "refId": "2",
-      "requisiteStageRefIds": [],
-      "type": "jenkins"
-    }
-  ],
-  "triggers": [
-    {
-      "enabled": true,
-      "job": "artifactory-sprintreviewdemo",
-      "master": "malibu-jenkins",
-      "project": "pctn",
-      "slug": "bitbucket-spinnaker-demo",
-      "source": "bitbucket",
-      "type": "git"
-    }
-  ],
-  "updateTs": "1533552282000"
+                "imagePullPolicy": "ALWAYS",
+                "name": "my-image",
+                "ports": [
+                  {
+                    "containerPort": 80,
+                    "name": "http",
+                    "protocol": "TCP"
+                  },
+                  {
+                    "containerPort": 9100,
+                    "name": "prometheus",
+                    "protocol": "TCP"
+                  }
+                ],
+                "volumeMounts": []
+              }
+            ],
+            "dnsPolicy": "ClusterFirst",
+            "events": [],
+            "freeFormDetails": "v2",
+            "initContainers": [],
+            "interestingHealthProviderNames": [
+              "KubernetesContainer",
+              "KubernetesPod"
+            ],
+            "loadBalancers": [
+              "malibu-v1-lb"
+            ],
+            "namespace": "default",
+            "nodeSelector": {},
+            "podAnnotations": {},
+            "provider": "kubernetes",
+            "region": "default",
+            "replicaSetAnnotations": {},
+            "securityGroups": [],
+            "stack": "dev",
+            "strategy": "highlander",
+            "targetSize": 1,
+            "terminationGracePeriodSeconds": 30,
+            "volumeSources": []
+          }
+        ],
+        "name": "Deploy",
+        "refId": "1",
+        "requisiteStageRefIds": [
+          "2"
+        ],
+        "type": "deploy"
+      },
+      {
+        "continuePipeline": false,
+        "failPipeline": true,
+        "job": "artifactory-sprintreviewdemo",
+        "master": "malibu-jenkins",
+        "name": "Jenkins",
+        "parameters": {},
+        "refId": "2",
+        "requisiteStageRefIds": [],
+        "type": "jenkins"
+      }
+    ],
+    "triggers": [
+      {
+        "enabled": true,
+        "job": "artifactory-sprintreviewdemo",
+        "master": "malibu-jenkins",
+        "project": "pctn",
+        "slug": "bitbucket-spinnaker-demo",
+        "source": "bitbucket",
+        "type": "git"
+      }
+    ],
+  }
+  ]
 }
