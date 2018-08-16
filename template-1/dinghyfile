@@ -2,7 +2,7 @@
   "application": "testapp1",
   "pipelines": [
   {
-    "application": "sprintreviewdemo",
+    "application": "testapp1",
     "description": "Auto created Malibu SaaS",
     "keepWaitingPipelines": false,
     "limitConcurrent": true,
@@ -12,7 +12,7 @@
         "clusters": [
         {
           "account": "kubernetes",
-          "application": "sprintreviewdemo",
+          "application": "testapp1",
           "cloudProvider": "kubernetes",
           "containers": [
             {
