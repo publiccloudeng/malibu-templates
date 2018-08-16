@@ -12,6 +12,7 @@
         "clusters": [
         {
           "account": "kubernetes",
+          "application": "sprintreviewdemo",
           "cloudProvider": "kubernetes",
           "containers": [
             {
