@@ -1,10 +1,12 @@
 {  
   "application": "sprintreviewdemo",
-  "pipelines": [{
-    "description": "a",
+  "pipelines": [
+  {
+    "application": "sprintreviewdemo",
+    "description": "Auto created Malibu SaaS",
     "keepWaitingPipelines": false,
-    "lastModifiedBy": "anonymous",
     "limitConcurrent": true,
+    "name": "This is Malibu!",
     "stages": [
       {
         "clusters": [
