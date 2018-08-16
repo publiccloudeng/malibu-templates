@@ -30,7 +30,7 @@
         "source": "bitbucket",
         "type": "git"
       }
-    ],
+    ]
   }
   ]
 }
